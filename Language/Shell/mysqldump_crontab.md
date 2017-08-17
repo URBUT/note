@@ -21,9 +21,9 @@ Cold Backup : DB 서버를 중단시키고 백업하는 것
 ------------------------
 
 
-[root@edgenode01 ~]# vi /u11/ews-1.0.4/maribackup/mysqldump.sh
+[root@edgenode01 ~]# vi /u11/ews-1.0.4/maria_backup/mysqldump.sh
 
-shell script 명 : /u11/ews-1.0.4/maribackup/mysqldump.sh
+shell script 명 : mysqldump.sh
 ```Shell 
 #!/bin/sh
 
@@ -39,14 +39,19 @@ PASSWORD="!root123$"
 # DATABASE=""
 
 # 백업 작업
-mysqldump -u$USERNAME -p$PASSWORD > /u11/ews-1.0.4/maria_bak_${DATE}.sql
+mysqldump -u$USERNAME -p$PASSWORD > /u11/ews-1.0.4/mariadb_backup/maria_bak_${DATE}.sql
+
+# 로그 삭제
+find /u11/ews-1.0.4/mariadb_backup/log/ -mtime +15 -name maria_bak_\* -exec rm {} \;
+
 ```
 
 ※ USERNAME, PASSWORD, DATABASE 다음(=)은 꼭 붙여쓴다
 
--실행권한 부여
+
+#####실행권한 부여
 [root@edgenode01 ~]# chmod +x /u11/ews-1.0.4/maria_backup/mysqldump.sh
 [root@edgenode01 ~]# vi /etc/crontab
 
-- 매주 일요일 02시 30분에 자동으로 실행하게 설정
+###### 매주 일요일 02시 30분에 자동으로 실행하게 설정
 > 30 2 * * 7 /u11/ews-1.0.4/maria_backup/mysqldump.sh
