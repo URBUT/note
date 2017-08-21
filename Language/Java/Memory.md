@@ -1,6 +1,6 @@
 ## 톰캣 메모리 설정
 
-###==JVM 구조==
+### ==JVM 구조==
 
 ![JVM Memory Model](http://cfile2.uf.tistory.com/image/276BA941552BBB1928C4DE)
 
@@ -27,7 +27,7 @@ Permanent 영역은 JVM 객체의 생명주기가 길다고 판단되는 객체�
 : Permanent Generation의 최대 크기 지정
 ```
 
-###==메모리 옵션==
+### ==메모리 옵션==
 JVM 메모리 튜닝은 매우 중요하다. 결국 Full GC 시간을 줄이는 것이 관건인데, 큰 요구 사항만 없다면, 전체 Heap Size는 1G 정도가 적당하다. 그리고 PermSize는 위에 말했듯이, Class들의 정보가 로딩되는 공간인데, 배포하고자 하는 Application이 엄청 크지 않다면, 128m 정도면 적당하다. (보통은 256m를 넘지 않는다.)
 그리고 Heap size는 JVM에서 자동으로 늘리거나 줄일 수가 있다. 그래서 `-Xms`와 `-Xmx`로 최소, 최대 Heap size를 정할 수 있는데, Server 시스템의 경우 항상 최대 메모리로 잡아 놓는 것이 좋다.
 메모리가 늘어난다는 것은 부하가 늘어난다는 것이고, 부하가 늘어날 때 메모리를 늘리는 작업 자체가 새로운 부하가 될 수 있기 때문에, 같은 값을 사용하는 것이 좋다.
@@ -36,12 +36,12 @@ JVM 메모리 튜닝은 매우 중요하다. 결국 Full GC 시간을 줄이는 
 
 이렇게 하면 전체 메모리 사용량은 Heap 1024m (이 중에 new가 384m) 그리고 perm이 128m이 되고, JVM 자체가 사용하는 메모리가 보통 300~500m 내외가 되서 java process가 사용하는 메모리 량은 1024 + 128 + 300~500 = 1.5G 정도가 된다.
 
-###==Out Of Memory(OOM)==
+### ==Out Of Memory(OOM)==
 자바 어플리케이션에서 주로 문제가 되는 것 중 하나가 Out Of Memory 에러다. JVM이 메모리를 자동으로 관리해줌에도 불구하고, 이런 문제가 발생하는 원인은 사용이 끝난 객체를 release하지 않는 경우이다. 예를 들어 static 변수를 통해서 대규모 array나 hashmap을 reference하고 있으면, GC가 되지 않고 계속 메모리를 점유해서 결과적으로 Out Of Memory 에러를 만들어낸다.
 Out Of Memory 에러를 추적하기 위해서는 그 순간의 Memory layout인 Heap Dump가 필요한데, 이 옵션을 적용해놓으면 Out Of Memory가 나올 때 순간적으로 Heap Dump를 떠서 파일로 저장해놓기 때문에, 장애 발생시 추적이 용이하다.
 >-XX:-HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=./java_pid<pid>.hprof
 
-###==GC Option==
+### ==GC Option==
 Memory 옵션만큼이나 중요한 GC Option이다.
 Parallel GC + Concurrent GC는 요즘 거의 공식처럼 사용된다.
 이 때 Paraleel GC에 대한 Thread 수를 정해야 하는데, 이 Thread 수는 전체 CPU Core 수보다는 적어야 하고, 2~4개 정도가 적당하다.
