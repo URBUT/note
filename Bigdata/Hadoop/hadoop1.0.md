@@ -1,6 +1,9 @@
 ## 하둡 1.0
+
 ### 하둡 1.0 구성요소
+
 ![hadoop-1.0](https://kmongcom.files.wordpress.com/2014/03/hadoop_diagram.png?w=584&h=340)
+
 HDFS/MapReduce.
 
 #####Namenode
@@ -15,3 +18,5 @@ Namenode는 메타데이터를 관리하기 위해 `EditLog` 와 `FsImage` 파�
 따라서 블록사이즈를 크게 하면 매핑정보가 그만큼 줄어들게 된다. 반면에 블록 사이즈가 커지면 맵리듀스에서 병렬적으로 처리할 수 있는 태스크의 개수가 작아지므로, 입력 파일의 사이즈가 작은 경우 Job 프로그램의 실행속도가 느려질 수도 있다.
 
 ![Namenode_SecondaryNamenode](https://kmongcom.files.wordpress.com/2014/03/secodary-name-node.png?w=467&h=506)
+
+참고 사이트 : https://kmongcom.wordpress.com/tag/hadoop/
