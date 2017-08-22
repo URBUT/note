@@ -52,4 +52,6 @@ Parallel GC + Concurrent GC는 요즘 거의 공식처럼 사용된다.
 *GC Log를 상세하게 걸어놓아도 성능저하는 거의 없다.
 >-XX:-PrintGC -XX:-PrintGCDetails -XX:-PrintGCTimeStamps -XX:-TraceClassUnloading -XX:-TraceClassLoading
 
-마지막에 적용된 TraceClassLoading은 Class가 Loading되는 순간 Log를 남긴다. 일반적으로 사용하지 않아도 되나, OutOfMemory 에러 발생시 Object가 아니라 Class에서 발생하는 경우는 Heap dump로는 분석이 불가능하기 때문에, Out Of Memory 에러 시 같이 사용함녀 좋다.
+마지막에 적용된 TraceClassLoading은 Class가 Loading되는 순간 Log를 남긴다. 일반적으로 사용하지 않아도 되나, OutOfMemory 에러 발생시 Object가 아니라 Class에서 발생하는 경우는 Heap dump로는 분석이 불가능하기 때문에, Out Of Memory 에러 시 같이 사용하면 좋다.
+
+[톰캣 튜닝 가이드](http://bcho.tistory.com/788)는 여기를 참조하자.
