@@ -22,7 +22,7 @@
 이를 통해 데이터의 변형(Corrupt) 를 막을 수 있다.
 `실시간 View`는 실시간으로 데이터를 Write하고 Read할 수 있는 시스템을 사용한다.
 
-
+---
 Bigdata의 Hadoop 및 eco system에 대한 mapping을 입력하면 다음과 같다.
 
 ![람다 아키텍처에 대한 솔루션 맵핑](http://cfile26.uf.tistory.com/image/242E9F3754AA96320436D8)
@@ -35,7 +35,7 @@ Bigdata의 Hadoop 및 eco system에 대한 mapping을 입력하면 다음과 같
 실시간 처리는 복잡한 알고리즘을 빠르게 데이터를 처리할 수 있는 솔루션이 필요한데, 대표적으로 Storm 등이 있으며,
 빠른 읽기와 쓰기를 지원해야 하기 때문에 Redis와 같은 In-Memory 기반의 NoSQL이 적절하게 추천되고 있다.
 
-
+---
 계층별로 추상화된 람다 아키텍처는 다음과 같다.
 
 ![계층별로 추상화 된 람다 아키텍처](http://cfile29.uf.tistory.com/image/2516723754AA96312EF8D6)
