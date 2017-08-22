@@ -1,4 +1,4 @@
-### Hadoop의 특징
+###Hadoop의 특징
 
 Fault Tolerance
 
@@ -45,6 +45,7 @@ Partition Tolerance(분할 용인) : 두 노드 사이가 분리가 되었더라
 CAP 이론에 따르면 위 3가지 중에 동시에 2가지만 보장할 수 있고 3개를 모두 보장하는 것이 불가능하다고 나와있다.
 그래서 데이터를 관리할 때 이 3가지 중에 어느 2가지에 중점을 두냐는 것은 아주 중요한 부분이다.
 이 부분을 이해하는데 [Nathan Hurst](http://blog.nahurst.com/)이 만든 아래의 [Visual Guide to NoSQL Sytems](http://blog.nahurst.com/visual-guide-to-nosql-systems)는 큰 도움이 된다.
+
 ![Nathan Hurst NoSQL Sys, CAP](https://blog.outsider.ne.kr/attach/1/550x412x1153500148.png.pagespeed.ic.qpvvoA4tBw.webp)
 
 기존에 많이 사용하던 **RDBMS는 3가지 중 CA에 집중**하고 있다. 웹이 발전하면서 다양한 요구사항이 생겨나고 엄청난 양의 데이터를 처리해야 하게 되면서 RDBMS가 갖지 못한 P의 특성이 필요해졌고 그러면서 등장한 것이 NoSQL이다.
