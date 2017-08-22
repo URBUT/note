@@ -6,7 +6,7 @@
 
 HDFS/MapReduce.
 
-#####Namenode
+##### Namenode
 하둡은 Master/Slave 구조를 가진다.
 Namenode는 HDFS에서 마스터 역할을 하며, 슬레이브 역할을 하는 Datanode에게 I/O 작업을 할당한다.
 Namenode는 메타데이터를 관리하기 위해 `EditLog` 와 `FsImage` 파일을 사용한다.
