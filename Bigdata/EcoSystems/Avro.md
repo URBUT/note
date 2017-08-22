@@ -18,7 +18,7 @@ Avro는 Thrift보다 확실한 장점이 있는데, 특히 application에서 RPC
 ### Parquet 포맷
 
 Parquet파일은 하둡에서 컬럼 기반 스토리지를 제공하는 오픈소스 파일 포맷이다.
-[parquet 설명blog](http://myownopinions.tistory.com/2)
+[parquet 설명](http://myownopinions.tistory.com/2)
 
 
 ### Arrow 포맷
