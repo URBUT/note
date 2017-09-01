@@ -14,3 +14,6 @@ Source-Channel-Sink의 구조로 이루어져 있다. 이미 다양한 유형의
 
 Kafka는 pub/sub 구조의 message queue로 볼 수 있는데, 저장소로 Disk 공간을 쓰는 것이 특징이다.
 따라서 메시지 유실이 되지 안흔 것을 최우선으로 하는 시스템에서 사용한다.
+queue
+
+kafka왜 빠른가.
