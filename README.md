@@ -44,7 +44,7 @@ $ sudo make prefix=/usr/local install
 B.
 ```
 <name setting>
-$ git config --global user.name="UR.BUT"
+$ git config --global user.name="URBUT"
 
 <email setting>
 $ git config --global user.email="hojun188@gmail.com"
