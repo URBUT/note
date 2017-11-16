@@ -9,7 +9,7 @@ java   - ByteCode 실행
 위 명령어들은 java를 처음에 배울 때 IDE 없이 cmd창 혹은 terminal 창에서 HelloWorld와 함께 입력해봤을만한 명령어다.
 
 1. jps
- >>
+>>
 jps 는 unix 명령어인 ps와 같이 실행 중인 java process를 보여주는 tool이다.
 일반적으로 ps 명령어와 grep 명령어의 조합으로 실행 중인 java process를 찾을 수도 있지만 jps를 사용하면 좀더 편하다.
 >>
